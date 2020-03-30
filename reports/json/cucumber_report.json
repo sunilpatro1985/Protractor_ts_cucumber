@@ -1,0 +1,183 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "As a user I should be able to add a customer",
+    "line": 1,
+    "id": "as-a-user-i-should-be-able-to-add-a-customer",
+    "tags": [],
+    "uri": "Features/Customers copy.feature",
+    "elements": [
+      {
+        "id": "as-a-user-i-should-be-able-to-add-a-customer;add-customer:",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Add Customer:",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on XYZ Bank home page",
+            "match": {
+              "location": "stepDef/Customers.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I open Add Customer screen",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should create a customer with Cust_fn, Cust_ln, 1234",
+            "match": {
+              "location": "stepDef/Customers.ts:33"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "config/hooks.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "As a user I should be able to add a customer",
+    "line": 1,
+    "id": "as-a-user-i-should-be-able-to-add-a-customer",
+    "tags": [],
+    "uri": "Features/Customers.feature",
+    "elements": [
+      {
+        "id": "as-a-user-i-should-be-able-to-add-a-customer;open-account:",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Open Account:",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am on XYZ Bank home page",
+            "match": {
+              "location": "stepDef/Customers.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I go to Open Account page",
+            "match": {
+              "location": "stepDef/Customers.ts:39"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 31018000000,
+              "error_message": "Error: TimeoutError: Element taking too long to appear in the DOM\nWait timed out after 30007ms\n    at Function.<anonymous> (/myfiles/Protractor/Protractor_ts_cucumber/Utility/Util.ts:19:19)\n    at step (/myfiles/Protractor/Protractor_ts_cucumber/outputjs/Utility/Util.js:33:23)\n    at Object.throw (/myfiles/Protractor/Protractor_ts_cucumber/outputjs/Utility/Util.js:14:53)\n    at rejected (/myfiles/Protractor/Protractor_ts_cucumber/outputjs/Utility/Util.js:6:65)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should select the Cust_fn Cust_ln as customer",
+            "match": {
+              "location": "stepDef/Customers.ts:44"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should select the currency as \"Rupee\"",
+            "match": {
+              "location": "stepDef/Customers.ts:50"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should click on Process to create an account",
+            "match": {
+              "location": "stepDef/Customers.ts:56"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "config/hooks.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

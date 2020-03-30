@@ -1,0 +1,30 @@
+{
+  "name": "Protractor-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "pretest": "npm run tsc",
+    "test": "node_modules/.bin/protractor outputjs/conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jasmine": "^3.5.10"
+  },
+  "devDependencies": {
+    "@types/node": "~12.12.31",
+    "jasmine": "3.5.0",
+    "protractor": "~5.4.3",
+    "typescript": "~3.8.3",
+    "log4js": "6.1.2",
+    "cucumber": "6.0.5",
+    "@types/cucumber": "6.0.1",
+    "protractor-cucumber-framework": "6.2.1",
+    "cucumber-html-reporter": "5.1.0",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "mkdirp": "1.0.3"
+  }
+}
