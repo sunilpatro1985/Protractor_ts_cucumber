@@ -5,13 +5,13 @@
     "line": 1,
     "id": "as-a-user-i-should-be-able-to-add-a-customer",
     "tags": [],
-    "uri": "Features/Customers copy.feature",
+    "uri": "Features/test.feature",
     "elements": [
       {
-        "id": "as-a-user-i-should-be-able-to-add-a-customer;add-customer:",
+        "id": "as-a-user-i-should-be-able-to-add-a-customer;add-customer",
         "keyword": "Scenario",
         "line": 10,
-        "name": "Add Customer:",
+        "name": "Add Customer",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -21,32 +21,37 @@
             "line": 4,
             "name": "I am on XYZ Bank home page",
             "match": {
-              "location": "stepDef/Customers.ts:22"
+              "location": "stepDef/Customers.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 69000000
+              "duration": 71000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 5,
-            "name": "I open Add Customer screen",
+            "name": "I go to Add Customer screen",
+            "match": {
+              "location": "stepDef/Customers.ts:29"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 1141000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "I should create a customer with Cust_fn, Cust_ln, 1234",
+            "name": "I enter Cust_fn, Cust_ln, 1234 to create a customer",
             "match": {
-              "location": "stepDef/Customers.ts:33"
+              "location": "stepDef/Customers.ts:34"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 3538000000
             }
           },
           {
@@ -68,90 +73,69 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           }
         ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "As a user I should be able to add a customer",
-    "line": 1,
-    "id": "as-a-user-i-should-be-able-to-add-a-customer",
-    "tags": [],
-    "uri": "Features/Customers.feature",
-    "elements": [
+      },
       {
-        "id": "as-a-user-i-should-be-able-to-add-a-customer;open-account:",
+        "id": "as-a-user-i-should-be-able-to-add-a-customer;open-account",
         "keyword": "Scenario",
-        "line": 23,
-        "name": "Open Account:",
+        "line": 20,
+        "name": "Open Account",
         "tags": [],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 9,
-            "name": "I am on XYZ Bank home page",
+            "line": 13,
+            "name": "I am on Open Account Page",
             "match": {
-              "location": "stepDef/Customers.ts:22"
+              "location": "stepDef/Customers.ts:40"
             },
             "result": {
               "status": "passed",
-              "duration": 45000000
+              "duration": 3134000000
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
-            "line": 10,
-            "name": "I go to Open Account page",
+            "keyword": "When ",
+            "line": 14,
+            "name": "I select Cust_fn Cust_ln as customer",
             "match": {
-              "location": "stepDef/Customers.ts:39"
+              "location": "stepDef/Customers.ts:47"
             },
             "result": {
-              "status": "failed",
-              "duration": 31018000000,
-              "error_message": "Error: TimeoutError: Element taking too long to appear in the DOM\nWait timed out after 30007ms\n    at Function.<anonymous> (/myfiles/Protractor/Protractor_ts_cucumber/Utility/Util.ts:19:19)\n    at step (/myfiles/Protractor/Protractor_ts_cucumber/outputjs/Utility/Util.js:33:23)\n    at Object.throw (/myfiles/Protractor/Protractor_ts_cucumber/outputjs/Utility/Util.js:14:53)\n    at rejected (/myfiles/Protractor/Protractor_ts_cucumber/outputjs/Utility/Util.js:6:65)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)"
+              "status": "passed",
+              "duration": 1049000000
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "I should select the Cust_fn Cust_ln as customer",
+            "keyword": "And ",
+            "line": 15,
+            "name": "I select currency as \"Rupee\"",
             "match": {
-              "location": "stepDef/Customers.ts:44"
+              "location": "stepDef/Customers.ts:54"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 655000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 12,
-            "name": "I should select the currency as \"Rupee\"",
-            "match": {
-              "location": "stepDef/Customers.ts:50"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 13,
+            "line": 16,
             "name": "I should click on Process to create an account",
             "match": {
-              "location": "stepDef/Customers.ts:56"
+              "location": "stepDef/Customers.ts:61"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 3078000000
             }
           },
           {
@@ -173,7 +157,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           }
         ]

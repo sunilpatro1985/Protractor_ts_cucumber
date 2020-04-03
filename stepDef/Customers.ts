@@ -1,9 +1,10 @@
-import { browser, element, by } from "protractor";
-import { Given, Then, When } from "cucumber";
+import { Given, Then } from "cucumber";
 import { HomePage } from "../pages/HomePage";
 import { Util } from "../Utility/Util";
 import { AddCustomerPage } from "../pages/AddCustPage";
 import { OpenAccount } from "../pages/OpenAccount"
+import { brotliCompress } from "zlib";
+import { browser } from "protractor";
 
 //let chai = require('chai').use(require('chai-as-promised'));
 //let expect = chai.expect;
@@ -16,47 +17,52 @@ const log = require("../config/Logging").default;
 var App = require("../TestData/App");
 
 var homePage = new HomePage();
-const addCustPage : AddCustomerPage = new AddCustomerPage();
-var openAccount : OpenAccount = new OpenAccount();
+const addCustPage: AddCustomerPage = new AddCustomerPage();
+var openAccount: OpenAccount = new OpenAccount();
 
 Given(/^I am on XYZ Bank home page$/, async () => {
   log.debug("Starting");
-    log.debug(await Util.getText(homePage.mainHeading));
-    await expect(await Util.getText(homePage.mainHeading)).to.equal("XYZ Bank");
-  });
+  log.debug(await Util.getText(homePage.mainHeading));
+  await expect(await Util.getText(homePage.mainHeading)).to.equal("XYZ Bank");
+});
 
-  Then(/^I go to Add Customer screen$/, async () => {
-    await homePage.goToOpenCustomerPage();
-    //await browser.sleep(2000);
-  });
+Then(/^I go to Add Customer screen$/, async () => {
+  await homePage.goToOpenCustomerPage();
+  //await browser.sleep(2000);
+});
 
-  Then(/^I should create a customer with ([^"]*), ([^"]*), ([^"]*)$/, async(fname, lname, pcode) => {
-    log.debug(fname + lname + pcode);
-    await addCustPage.addCustomer(fname, lname, pcode);
-    //await browser.sleep(3000);
-  })
+Then(/^I enter ([^"]*), ([^"]*), ([^"]*) to create a customer$/, async (fname, lname, pcode) => {
+  log.debug(fname + lname + pcode);
+  await addCustPage.addCustomer(fname, lname, pcode);
+  //await browser.sleep(3000);
+})
 
-Then(/^I go to Open Account page$/, async () => {
-    await homePage.goToOpenAccountPage();
-    await expect(await Util.getText(openAccount.Process)).to.equal("Process");
-  });
+Given(/^I am on Open Account Page$/, async () => {
+  await homePage.goToOpenAccountPage();
+  await browser.sleep(2000);
+  //log.debug(await Util.getText(openAccount.Process));
+  await expect(await Util.getText(openAccount.Process)).to.equal("Process");
+});
 
-  Then(/^I should select the ([^"]*) ([^"]*) as customer$/, async(fname: any, lname: any) => {
-    var customerName = fname + " " + lname;
-    log.debug(customerName);
-    //await browser.sleep(3000);
-  })
+Then(/^I select ([^"]*) as customer$/, async (fname: any) => {
+  var customerName = fname;
+  //log.debug(customerName);
+  await openAccount.selectACustomer(customerName);
+  //await browser.sleep(3000);
+})
 
-  Then(/^I should select the currency as "([^"]*)"$/, async(currency) => {
-    var Currency: any = currency;
-    log.debug(Currency);
-    //await browser.sleep(3000);
-  })
+Then(/^I select currency as "([^"]*)"$/, async (currency) => {
+  var Currency: any = currency;
+  //log.debug(Currency);
+  await openAccount.selectACurrency(Currency);
+  //await browser.sleep(3000);
+})
 
-  Then(/^I should click on Process to create an account$/, async() => {
-    log.debug("I should click on Process to create an account");
-  
-  })
-  
+Then(/^I should click on Process to create an account$/, async () => {
+  await openAccount.ProcessIt();
+  //log.debug("I should click on Process to create an account");
+
+})
+
 
 
