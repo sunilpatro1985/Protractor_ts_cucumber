@@ -18,7 +18,7 @@
     "jasmine": "3.5.0",
     "protractor": "~5.4.3",
     "typescript": "~3.8.3",
-    "log4js": "6.1.2",
+    "log4js": "6.4.0",
     "cucumber": "6.0.5",
     "@types/cucumber": "6.0.1",
     "protractor-cucumber-framework": "6.2.1",
